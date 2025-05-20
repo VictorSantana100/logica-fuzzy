@@ -5,7 +5,7 @@
     font-family: sans-serif;
 }
 
-:root{
+:root {
     --primary: #1b83dc;
 }
 
@@ -13,16 +13,23 @@
     font-size: 2rem;
     margin: 2rem 0;
     text-align: center;
-    color: var(--primary) ;
+    color: var(--primary);
 }
 
-.paragraph{
+.sub-title {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+    color: var(--primary);
+}
+
+.paragraph {
     margin: 1rem;
     color: gray;
     text-align: justify;
 }
 
-.btn{
+.btn {
     margin-top: 1rem;
     text-decoration: none;
     padding: 10px 18px;
@@ -32,21 +39,36 @@
     transition: 0.3s;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #136cba;
     transition: 0.3s;
 }
 
-.container {
+.container,
+header {
     display: block;
     margin: 5rem auto;
     width: 80%;
 }
 
-.container-btn{
+.container-btn {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 80%;
     margin: 1rem auto;
+}
+
+.questions{
+    text-align: center;
+    padding: 15px;
+}
+
+.question{
+    background-color: lightgray;
+     padding: 15px;
+}
+
+.solution{
+    margin-top: 1rem;
 }
