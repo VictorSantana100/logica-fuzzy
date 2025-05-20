@@ -33,6 +33,31 @@ function questionFour(x) {
     return 1 - x / 10;
 }
 
+function somaElementos(elementosA, elementosB) {
+    let somaValores = 0;
+    let minGrausAb = 0;
+
+    const elementosASplit = splitElement(elementosA);
+    const elementosBSplit = splitElement(elementosB);
+
+    const valorA = parseFloat(elementosASplit[0]);
+    const valorB = parseFloat(elementosBSplit[0]);
+
+    const grausPertinenciaA = parseFloat(elementosASplit[1]);
+    const grausPertinenciaB = parseFloat(elementosBSplit[1]);
+    minGrausAb = minAB(grausPertinenciaA, grausPertinenciaB); //Pega o mínimo dos graus de AB
+    somaValores = valorA + valorB;
+
+    //console.log(`Soma valores: ${valorA} + ${valorB} = ${somaValores}, Graus de pertinencia: ${grausPertinenciaA}, ${grausPertinenciaB} = ${minGrausAb}`);
+    return `${somaValores}; ${minGrausAb}`;
+}
+
+function minAB(grausA, grausB){
+    if(grausA > grausB)
+        return grausB;
+    return grausA;
+}
+
 /**
  * Declara os elemetos e chama as funções
  */
@@ -60,3 +85,19 @@ solutionIII.innerHTML = solutionTree;
 
 solutionIIII = document.getElementById('solutionIIII');
 solutionIIII.innerHTML = solutionFour;
+
+
+/**
+ * Questão 5
+ */
+const elementosA = ["-1; 0.5", "0; 1", "1; 0.5", "2; 0.3"];
+const elementosB = ["2; 0.5", "3; 1", "4; 0.5", "5; 0.3"];
+let somaElementosAB = [];
+for (let i = 0; i < elementosA.length; i++) {
+    for (let j = 0; j < elementosB.length; j++) {
+        somaElementosAB.push(somaElementos(elementosA[i], elementosB[j]));
+    }
+}
+
+let solutionQ5 = document.getElementById('solutionQ5');
+solutionQ5.innerHTML = somaElementosAB;

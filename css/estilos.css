@@ -28,6 +28,9 @@
     color: gray;
     text-align: justify;
 }
+.center {
+    text-align: center !important;
+}
 
 .btn {
     margin-top: 1rem;
